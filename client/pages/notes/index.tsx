@@ -1,6 +1,8 @@
+import styles from "../../styles/notes.module.scss";
 import { Notes as NotesType } from "../../src/types";
 import client from "../../src/client";
 import { GET_NOTES } from "../../src/queries";
+import { useRouter } from "next/router";
 
 interface NotesProps {
     notes: NotesType;
@@ -9,14 +11,18 @@ interface NotesProps {
 const MAX_CONTENT_LENGTH = 20; // In number of characters
 
 export default function Notes({ notes }: NotesProps) {
+
+    const router = useRouter();
+
     return (
-        <div className="notes">
-            <h1 className="heading">Notes</h1>
-            <table>
+        <div className={styles.notes}>
+            <h1 className={styles.heading}>Notes</h1>
+            <table className={styles.table}>
                 <thead>
                     <tr>
                         <th>Title</th>
                         <th>Author</th>
+                        <th>Content</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +33,8 @@ export default function Notes({ notes }: NotesProps) {
                                 + "...";
 
                         return (
-                            <tr key={note.id}>
+                            <tr key={note.id}
+                                onClick={() => router.push(`/notes/${note.id}`)}>
                                 <td>{note.title}</td>
                                 <td>{note.author}</td>
                                 <td>{note.content}</td>

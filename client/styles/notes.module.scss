@@ -1,0 +1,44 @@
+.notes {
+    background-color: rgb(202, 240, 203);
+    padding: 2rem;
+}
+
+.heading {
+    color: rgb(72, 15, 204);
+    text-align: center;
+    margin: 2rem;
+    padding: 0;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    padding: 5rem;
+
+    thead {
+        background-color: rgb(196, 170, 255);
+    }
+
+    tbody {
+        background-color: rgb(171, 206, 251);
+
+        tr {
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(84, 141, 245);
+            }
+
+            &:active {
+                background-color: rgb(13, 72, 180);
+            }
+        }
+    }
+
+    th, td {
+        border: 0.1rem solid black;
+        padding: 0.5rem;
+    }
+}
