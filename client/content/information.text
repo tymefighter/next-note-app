@@ -1,0 +1,8 @@
+This Notes Application is built for enhanced performance.
+It can support a large number of users at once. An
+important thing to "note" (no pun intended) about this 
+application is that it features data consistency, even
+when multiple users are using it at once. Another thing
+is that the application is pretty lightweight, and has
+server side rendering capabilities, which improves the
+SEO (Search Engine Optimization).
