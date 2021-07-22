@@ -5,6 +5,8 @@ export interface Note {
     author: string;
 };
 
-export type NotePartial = Partial<Note> & {id: string};
+export type NoteAdd = Omit<Note, "id">;
+
+export type NoteEdit = Partial<Note> & {id: string};
 
 export type Notes = Note[];

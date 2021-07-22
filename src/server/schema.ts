@@ -10,10 +10,25 @@ const typeDefs = gql`
 
     type Query {
         notes: [Note!]!
+        note(id: ID!): Note
+    }
+
+    input NoteAdd {
+        title: String!
+        content: String!
+        author: String!
+    }
+
+    input NoteEdit {
+        id: ID!
+        title: String
+        content: String
+        author: String
     }
 
     type Mutation {
-        note(id: ID!): Note
+        addNote(noteAdd: NoteAdd): Note
+        editNote(noteEdit: NoteEdit): Note
     }
 `;
 
