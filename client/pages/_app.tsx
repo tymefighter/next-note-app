@@ -1,3 +1,4 @@
+import "../styles/global.scss";
 import { NextComponentType } from "next";
 import { ApolloProvider } from "@apollo/client";
 import client from "../src/client";

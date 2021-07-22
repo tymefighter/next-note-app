@@ -1,0 +1,51 @@
+.home {
+    background-color: rgb(238, 220, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.main {
+    background-color: rgb(190, 255, 239);
+    padding: 2rem;
+    border-radius: 3rem;
+
+    h1 {
+        font-size: 2rem;
+        padding: 0;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.section {    
+    background-color: rgb(253, 238, 223);
+    padding: 2rem;
+    border-radius: 2rem;
+
+    h2 {
+        font-size: 1.7rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.3rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.listSection {
+    border-radius: 5rem;
+    background-color: rgb(244, 253, 223);
+    padding: 2rem;
+    font-size: 1.5rem;
+}
