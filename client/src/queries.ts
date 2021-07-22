@@ -1,15 +1,5 @@
 import { gql } from "@apollo/client";
 
-export const GET_NOTES = gql`
-    query GetNotes {
-        notes {
-            id
-            title
-            author
-        }
-    }
-`;
-
 const NOTE_FIELDS = gql`
     fragment NoteFields on Note {
         id
@@ -17,6 +7,15 @@ const NOTE_FIELDS = gql`
         content
         author
     }
+`;
+
+export const GET_NOTES = gql`
+    query GetNotes {
+        notes {
+            ...NoteFields
+        }
+    }
+    ${NOTE_FIELDS}
 `;
 
 export const GET_NOTE = gql`
