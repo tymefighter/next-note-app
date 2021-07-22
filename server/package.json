@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "The Note App Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -p . && node build/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.0.2",
+    "graphql": "^15.5.1"
+  }
+}

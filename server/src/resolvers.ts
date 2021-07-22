@@ -1,5 +1,5 @@
-import { gql, UserInputError } from "apollo-server-micro";
-import * as types from "../types";
+import { UserInputError } from "apollo-server";
+import * as types from "./types";
 import data from "./data";
 
 const resolvers = {

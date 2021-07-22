@@ -1,4 +1,4 @@
-import { gql } from "apollo-server-micro";
+import { gql } from "apollo-server";
 
 const typeDefs = gql`
     type Note {
@@ -27,8 +27,8 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addNote(noteAdd: NoteAdd): Note
-        editNote(noteEdit: NoteEdit): Note
+        addNote(noteAdd: NoteAdd!): Note
+        editNote(noteEdit: NoteEdit!): Note
     }
 `;
 

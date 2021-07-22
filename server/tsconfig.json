@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2019"],
+        "module": "commonjs",
+        "allowJs": false,
+        "noImplicitAny": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "outDir": "build",
+        "esModuleInterop": true
+    },
+    "include": ["src"],
+    "exclude": []
+}
