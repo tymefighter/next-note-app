@@ -1,3 +1,3 @@
 export default function Notes() {
-    return <div></div>;
+    return <div>Notes</div>;
 };
