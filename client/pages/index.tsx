@@ -1,5 +1,6 @@
 import fs from "fs";
 import styles from "../styles/home.module.scss";
+import Link from "next/link";
 
 interface HomeProps {
     main: string;
@@ -31,6 +32,11 @@ export default function Home({ main, information, motivation, coreValues }: Home
                     )}
                 </ul>
             </section>
+            <Link href="/notes">
+                <a className={styles.notesLink}>
+                    Go to Notes Page
+                </a>
+            </Link>
         </div>
     );
 };
