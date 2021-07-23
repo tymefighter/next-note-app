@@ -1,0 +1,26 @@
+@keyframes loading {
+    from {
+        transform: rotate-x(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.loading {
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    span {
+        display: block;
+        animation: loading 0.5s infinite linear;
+        font-size: 5rem;
+        height: fit-content;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

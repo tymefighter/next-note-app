@@ -3,9 +3,11 @@ import { useMutation } from "@apollo/client";
 import { useCallback, useState, FormEvent } from "react"
 import { ADD_NOTE } from "../../src/queries";
 import { NoteAdd } from "../../src/types";
+import { useRouter } from "next/router";
 
 export default function AddNote() {
 
+    const router = useRouter();
     const addNote = useMutation(ADD_NOTE)[0];
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -17,6 +19,8 @@ export default function AddNote() {
         addNote({
             variables: { noteAdd }
         });
+
+        router.push("/notes");
     }, [title, author, content]); 
 
     return (
@@ -26,12 +30,14 @@ export default function AddNote() {
             <div>
                 <label htmlFor="title">Title</label>
                 <input onChange={(event) => setTitle(event.target.value)}
+                    value={title}
                     type="text" name="title" id="title" />
             </div>
 
             <div>
                 <label htmlFor="author">Author</label>
                 <input onChange={(event) => setAuthor(event.target.value)}
+                    value={author}
                     type="text" name="author" id="author" />
             </div>
 
@@ -39,6 +45,7 @@ export default function AddNote() {
                 <label htmlFor="content">Content</label>
                 <textarea rows={5}
                     onChange={(event) => setContent(event.target.value)}
+                    value={content}
                     name="content" id="content"></textarea>
             </div>
 

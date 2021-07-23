@@ -29,7 +29,7 @@ const resolvers = {
 
             if(noteEdit.title) note.title = noteEdit.title;
             if(noteEdit.author) note.author = noteEdit.author;
-            if(noteEdit.content) note.author = noteEdit.content;
+            if(noteEdit.content) note.content = noteEdit.content;
 
             return note;
         }

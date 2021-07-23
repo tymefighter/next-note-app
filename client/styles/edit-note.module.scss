@@ -1,0 +1,50 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2rem;
+    background-color: rgb(191, 191, 255);
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        font-style: italic;
+        color: rgb(5, 5, 117);
+    }
+
+    div {
+        display: flex;
+    }
+
+    label {
+        flex: 1 40%;
+        font-size: 1.7rem;
+    }
+
+    input {
+        flex: 1 40%;
+        font-size: 1.3rem;
+    }
+
+    textarea {
+        flex: 1 40%;
+        font-size: 1.2rem;
+    }
+
+    button {
+        color: rgb(18, 70, 5);
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        background-color: rgb(230, 255, 198);
+
+        &:hover {
+            background-color: rgb(181, 255, 83);
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: rgb(83, 122, 32);
+        }
+    }
+}

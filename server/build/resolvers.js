@@ -42,7 +42,7 @@ var resolvers = {
             if (noteEdit.author)
                 note.author = noteEdit.author;
             if (noteEdit.content)
-                note.author = noteEdit.content;
+                note.content = noteEdit.content;
             return note;
         }
     },
