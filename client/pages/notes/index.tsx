@@ -8,7 +8,7 @@ interface NotesProps {
     notes: NotesType;
 };
 
-const MAX_CONTENT_LENGTH = 20; // In number of characters
+const MAX_CONTENT_LENGTH = 80; // In number of characters
 
 export default function Notes({ notes }: NotesProps) {
 
@@ -37,7 +37,7 @@ export default function Notes({ notes }: NotesProps) {
                                 onClick={() => router.push(`/notes/${note.id}`)}>
                                 <td>{note.title}</td>
                                 <td>{note.author}</td>
-                                <td>{note.content}</td>
+                                <td>{content}</td>
                             </tr>
                         );
                     })}

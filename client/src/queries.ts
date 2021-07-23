@@ -28,7 +28,7 @@ export const GET_NOTE = gql`
 `;
 
 export const ADD_NOTE = gql`
-    query AddNote($noteAdd: NoteAdd!) {
+    mutation AddNote($noteAdd: NoteAdd!) {
         addNote(noteAdd: $noteAdd) {
             ...NoteFields
         }
@@ -37,7 +37,7 @@ export const ADD_NOTE = gql`
 `;
 
 export const EDIT_NOTE = gql`
-    query AddNote($noteEdit: NoteEdit!) {
+    mutation EditNote($noteEdit: NoteEdit!) {
         editNote(noteEdit: $noteEdit) {
             ...NoteFields
         }
